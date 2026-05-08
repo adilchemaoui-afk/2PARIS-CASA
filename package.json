@@ -1,25 +1,35 @@
-"use client";
-
-import * as React from "react";
-import { cn } from "@/lib/utils";
-
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
-
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
-    return (
-      <input
-        type={type}
-        className={cn(
-          "flex h-9 w-full rounded-md border border-maroc-brown/20 bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-maroc-gold disabled:cursor-not-allowed disabled:opacity-50",
-          className
-        )}
-        ref={ref}
-        {...props}
-      />
-    );
+{
+  "name": "paris-casa",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.1.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "@supabase/supabase-js": "2.49.0",
+    "resend": "4.1.0",
+    "lucide-react": "0.460.0",
+    "clsx": "2.1.1",
+    "tailwind-merge": "2.6.0"
+  },
+  "devDependencies": {
+    "typescript": "5.7.0",
+    "@types/node": "22.0.0",
+    "@types/react": "19.0.0",
+    "@types/react-dom": "19.0.0",
+    "tailwindcss": "3.4.0",
+    "postcss": "8.4.0",
+    "autoprefixer": "10.4.0",
+    "eslint": "9.0.0",
+    "eslint-config-next": "15.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
-);
-Input.displayName = "Input";
-
-export { Input };
+}
